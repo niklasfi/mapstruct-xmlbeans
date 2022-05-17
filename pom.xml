@@ -58,6 +58,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>${maven-compiler-plugin.version}</version>
                 <configuration>
+                    <debug>true</debug>
+                    <debuglevel>lines,vars,source</debuglevel>
                     <meminitial>1024m</meminitial>
                     <maxmem>2024m</maxmem>
                     <annotationProcessorPaths>
