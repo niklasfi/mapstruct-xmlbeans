@@ -31,3 +31,13 @@ The whole point of this repo is to test mapstruct in combination with xmlbeans, 
 ### clear `deferredMapers` in `org.mapstruct.ap.MappingProcessor::process`
 
 The error occurs on the second invocation of `process` in `MappingProcessor`. If `deferredMappers` is cleared on the second invocation of `process`, the compilation is successful.
+
+## how to debug
+
+Run 
+```
+MAVEN_DEBUG_OPTS="-Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=8000" mvnDebug compile
+```
+and connect with a debugger of your liking.
+
+It may be advisable to alter the xmlbeans dependency to a local version with debug symbols to ease the process.
