@@ -47,11 +47,6 @@
                     <meminitial>1024m</meminitial>
                     <maxmem>2024m</maxmem>
                     <annotationProcessorPaths>
-                        <path>
-                            <groupId>org.mapstruct</groupId>
-                            <artifactId>mapstruct-processor</artifactId>
-                            <version>1.4.2.Final</version>
-                        </path>
                     </annotationProcessorPaths>
                     <compilerArgs>-Amapstruct.verbose=true</compilerArgs>
                     <source>18</source>
