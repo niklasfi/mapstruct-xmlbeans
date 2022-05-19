@@ -21,3 +21,13 @@ mvn compile
 ```
 
 note that `mvn compile` has to be executed twice. The error will occur on any subsequent invocation of mapstruct.
+
+## known workarounds
+
+### remove xmlbeans
+
+The whole point of this repo is to test mapstruct in combination with xmlbeans, but one way to avoid the error is by getting rid of the xmlbeans build plugin in `pom.xml`.
+
+### clear `deferredMapers` in `org.mapstruct.ap.MappingProcessor::process`
+
+The error occurs on the second invocation of `process` in `MappingProcessor`. If `deferredMappers` is cleared on the second invocation of `process`, the compilation is successful.
