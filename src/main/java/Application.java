@@ -1,5 +1,3 @@
-import noNamespace.RootDocument;
-
 public class Application {
 
     public static void main(String[] args) {
@@ -8,8 +6,6 @@ public class Application {
         car.setNumberOfSeats(5);
 
         CarDto carDto = CarMapper.INSTANCE.carToCarDto(car);
-
-        RootDocument document;
 
         System.exit(0);
     }
